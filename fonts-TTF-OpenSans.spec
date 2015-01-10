@@ -1,18 +1,19 @@
 %define	fontname open-sans
 %define	fontconf 60-%{fontname}.conf
-Summary:	Open Sans is a humanist sans-serif typeface designed by Steve Matteson
+Summary:	Open Sans - a humanist sans-serif typeface designed by Steve Matteson
+Summary(pl.UTF-8):	Open Sans - humanistyczny krój sans-serif zaprojektowany przez Steve'a Mattesona
 Name:		fonts-TTF-OpenSans
 Version:	1.10
 Release:	1
 License:	Apache v2.0
 Group:		Fonts
-URL:		http://www.google.com/fonts/specimen/Open+Sans
 # Since the font doesn't have clear upstream, the source zip package is
 # downloaded from Google Fonts. It is then converted to tar.gz. All by get-source.sh.
 Source0:	http://pkgs.fedoraproject.org/repo/pkgs/open-sans-fonts/open-sans-fonts-%{version}.tar.xz/5fa43b45f45c7ef4b589b3bdf4052d77/open-sans-fonts-%{version}.tar.xz
 # Source0-md5:	5fa43b45f45c7ef4b589b3bdf4052d77
 Source1:	fontconfig.conf
 Source2:	get-source.sh
+URL:		http://www.google.com/fonts/specimen/Open+Sans
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	ttembed
 BuildRequires:	xz
@@ -29,6 +30,16 @@ Latin CE, Greek and Cyrillic character sets. Open Sans was designed
 with an upright stress, open forms and a neutral, yet friendly
 appearance. It was optimized for print, web, and mobile interfaces,
 and has excellent legibility characteristics in its letter forms.
+
+%description -l pl.UTF-8
+Open Sans to humanistyczny krój sans-serif zaprojektowany przez
+Steve'a Mattesona, pracującego jako Type Director firmy Ascender Corp.
+Ta wersja zawiera pełny zestaw 897 znaków, obejmujący standardowe
+zestawy ISO Latin 1, Latin CE, grekę i cyrylicę. Open Sans został
+zaprojektowany z naciskiem na proste, otwarte formy oraz neutralny,
+ale przyjazny wygląd. Jest zoptymalizowany pod kątem drukowania,
+przeglądania WWW, interfejsów urządzeń przenośnych; ma świetną
+charakterystykę, jeśli chodzi o czytelność liter.
 
 %prep
 %setup -q -n open-sans-fonts-%{version}
